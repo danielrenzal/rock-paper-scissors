@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em min(10%, 30em) 0;
+}
+
+header .score-section{
+    text-align: center;
+}
+
+.score-section p{
+    font-size: 1.5rem;
+    margin-top: .5em;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    height: 100vh;
+}
+.intro h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.intro a{
+    text-decoration: none;
+}
+.intro .start-btn, .hand-choices li button, .popup li button{
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    padding: 1em 2em;
+    width: fit-content;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.popup-container{
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    display: none;
+    place-items: center;
+}
+
+.popup{
+    padding: 2em;
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    gap: 1em;
+}
+
+.popup .display-score{
+    display: none;
+}
+
+.match h1{
+    font-size: min(7vw, 2.5em);
+    text-align: center;
+    margin-top: 1em;
+}
+
+.match .hands-section{
+    display: flex;
+    justify-content: center;
+}
+
+.hands-section .player-hand{
+    transform: scaleX(-1);
+}
+.hands-section .hand{
+    width: min(50%, 20em);
+}
+
+.hand-choices, .popup ul{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em;
+    flex-wrap: wrap;
+}
+.hand-choices li, .popup li{
+    list-style: none;
+}
+.hand-choices li button{
+    padding: .8em 2em;
+    width: 8em;
+}
+
+
+@keyframes player-handshake {
+    0%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+    15%{
+        transform: scaleX(-1) translateY(-50px) rotate(45deg);
+    }
+    30%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform: scaleX(-1) translateY(-50px) rotate(45deg);
+    }
+    65%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+    80%{
+        transform: scaleX(-1) translateY(-50px) rotate(45deg);
+    }
+    100%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes computer-handshake {
+    0%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    15%{
+        transform: translateY(-50px) rotate(45deg);
+    }
+    30%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform: translateY(-50px) rotate(45deg);
+    }
+    65%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    80%{
+        transform: translateY(-50px) rotate(45deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}

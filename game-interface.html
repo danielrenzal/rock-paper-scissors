@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper and Scissors</title>
+</head>
+<body>
+        <main>
+            <header>
+            <section class="player-score score-section">
+                <h2 class="label">Player</h2>
+                <p class="score">0</p>
+            </section>
+            <section class="computer-score score-section">
+                <h2 class="label">Computer</h2>
+                <p class="score">0</p>
+            </section>
+        </header>
+            <section class="match">
+                <h1 class="result-instruction">Choose an option</h1>
+                <section class="hands-section">
+                    <img class="player-hand hand" src="assets/rock.png" alt="rock-forming-hand">
+                    <img class="computer-hand hand" src="assets/rock.png" alt="rock-forming-hand">
+                </section>
+                <ul class="hand-choices">
+                    <li><button type="button" class="rock">rock</button></li>
+                    <li><button type="button" class="paper">paper</button></li>
+                    <li><button type="button" class="scissors">scissors</button></li>
+                </ul>
+            </section> 
+        </main>
+    <div class="popup-container">
+        <div class="popup">
+            <div class="popup-choices">
+                <h1>How many rounds do you want?</h1>
+                <ul class="round-choices">
+                    <li><button type="button" class="3">3</button></li>
+                    <li><button type="button" class="5">5</button></li>
+                    <li><button type="button" class="10">10</button></li>
+                </ul>
+            </div>
+           <div class="display-score">
+               <h1 class="game-result"></h1>
+               <ul class="play-again">
+                <li><button type="button" class="yes">yes</button></li>
+                <li><button type="button" class="no">no</button></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
