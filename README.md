@@ -1,6 +1,6 @@
 # rock-paper-scissors
  
-This project is based from one of the tutorials that I've watched on YouTube to learn JavaScript (link:).
+This project is based from one of the tutorials that I've watched on YouTube to learn JavaScript (link: https://www.youtube.com/watch?v=qWPtKtYEsN4).
 
 I have made some changes/additions such as:
 
