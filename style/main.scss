@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@mixin buttonContainerStyle{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    flex-wrap: wrap;
+}
+
+@mixin buttonStyle{
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    a{
+        @include buttonStyle();
+        text-decoration: none;
+        margin-top: 5em;
+    }
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em #{"min(10%, 30em)"} 0;
+
+    .player-score{
+        text-align: left;
+    }
+    .computer-score{
+        text-align: right;
+    }
+        
+    p{
+        font-size: 1.5rem;
+        margin-top: .5em;
+    }
+    
+}
+
+.popup-container{
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    display: none;
+    place-items: center;
+}
+
+.popup{
+    padding: 3em;
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    .display-score{
+        display: none;
+    }
+    ul{
+        @include buttonContainerStyle();
+    }
+    h1{
+        font-weight: lighter;
+    }
+    button{
+        @include buttonStyle();
+        margin: .5em;
+        width: 6em;
+    }
+}
+ 
+.match{
+    h1{
+        font-size: #{"min(8vw, 2.5em)"};
+        text-align: center;
+        margin-top: #{"max(1em, (calc(3em - 15%)))"};
+        font-weight: lighter;
+    }
+    .hands-section{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em
+    }
+    .hand-choices{
+        @include buttonContainerStyle();
+        button{
+            @include buttonStyle();
+            width: 8em;
+            margin: .5em;
+        }
+    }
+}
+
+.hands-section .player-hand{
+    transform: scaleX(-1);
+}
+.hands-section .hand{
+    width: #{"min(50%, 20em)"};
+}
+
+.hand-choices li, .popup li{
+    list-style: none;
+}
+
+@media (max-width: 566px){
+    .popup{
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+
+
+@keyframes player-handshake {
+    0%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+    15%{
+        transform: scaleX(-1) translateY(-50px) rotate(45deg);
+    }
+    30%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform: scaleX(-1) translateY(-50px) rotate(45deg);
+    }
+    65%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+    80%{
+        transform: scaleX(-1) translateY(-50px) rotate(45deg);
+    }
+    100%{
+        transform: scaleX(-1) translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes computer-handshake {
+    0%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    15%{
+        transform: translateY(-50px) rotate(45deg);
+    }
+    30%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform: translateY(-50px) rotate(45deg);
+    }
+    65%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    80%{
+        transform: translateY(-50px) rotate(45deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
