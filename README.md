@@ -1,7 +1,7 @@
 # Rock-Paper-Scissors
 
 ## Description
-This project was based from one of the tutorials that I've watched on YouTube to learn JavaScript [Link](https://www.youtube.com/watch?v=qWPtKtYEsN4).
+This project was based from one of the tutorials that I've watched on YouTube to learn JavaScript. [Link](https://www.youtube.com/watch?v=qWPtKtYEsN4)
 
 ## Technologies Used
 - HTML
